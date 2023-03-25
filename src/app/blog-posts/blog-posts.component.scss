@@ -1,0 +1,48 @@
+$primary-black-color: #000000;
+$primary-white-color: #ffff;
+
+.blog-posts {
+  background-color: $primary-black-color;
+  color: $primary-white-color;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 4.0625rem;
+  }
+
+  &__post {
+    width: 48.75rem;
+    overflow: hidden;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &--reading {
+  }
+
+  &--date {
+    font-weight: lighter;
+    font-size: 12px;
+  }
+
+  &----summary {
+    font-size: 17px;
+  }
+
+  &__content {
+    font-size: 17px;
+  }
+
+  &__content img {
+    max-width: 100%;
+    height: auto;
+  }
+}

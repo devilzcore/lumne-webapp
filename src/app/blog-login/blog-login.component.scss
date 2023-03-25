@@ -1,0 +1,15 @@
+.blog-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  &__content form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: .9375rem;
+  }
+}

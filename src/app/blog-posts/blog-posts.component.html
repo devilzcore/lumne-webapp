@@ -1,0 +1,29 @@
+<div class="blog-posts">
+<br />
+<app-blog-menu></app-blog-menu>
+  <div class="blog-posts__container">
+    <div class="blog-posts__post">
+      <h1>{{ post.title }}</h1>
+      <p class="blog-posts--reading">{{ post.readingTime }} minutes for reading.</p>
+      <p class="blog-posts--date">{{ post.postedAt }}</p>
+      <img class="blog-posts__image" src="{{ post.image }}" alt="">
+      <app-blog-categories [post]="post"></app-blog-categories>
+      <p class="blog-posts--summary">{{ post.summary }}</p>
+      <div class="blog-posts__content"
+        [innerHTML]="post.content">
+      </div>
+    </div>
+    <div class="blog-posts__side">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

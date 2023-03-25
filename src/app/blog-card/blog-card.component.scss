@@ -1,0 +1,62 @@
+$date-color: #6C6C6C;
+$category-link-color: #ffff;
+$category-pcgamer-color: #FF0000;
+$category-anime-color: #000575;
+
+.blog-card
+{
+  width: 49.9375rem;
+  height: 17.1875rem;
+
+  border-radius: .3125rem;
+  margin: .625rem;
+
+  display: flex;
+
+  &__link {
+    text-decoration: none;
+    color: $category-link-color;
+  }
+
+  &__link h2:hover {
+    color: blue;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  &__title h2 {
+    font-size: 29;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    margin: 20px 0px 0px;
+  }
+
+  &__image {
+    max-width: 21.5rem;
+    max-height: 14.5625rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &___summary p {
+    font-size: 14px;
+    font-weight: regular;
+  }
+
+  &__date {
+    font-size: 11px;
+    font-weight: regular;
+    color: $date-color;
+    margin-top: 3px;
+  }
+}

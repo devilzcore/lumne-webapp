@@ -1,0 +1,25 @@
+$line-color: #D9D9D9;
+$primary-white-color: #ffff;
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.blog-list {
+  color: $primary-white-color;
+
+  &--dashed-line {
+    border: 0.5px solid $line-color;
+    width: 192px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    margin-left: .75rem;
+    font-size: 27;
+    font-weight: regular;
+    margin: 13px 0;
+  }
+}
