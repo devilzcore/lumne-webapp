@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 
@@ -8,6 +9,7 @@ import { ControlValueAccessor } from '@angular/forms';
 })
 export class BlogFileUploadComponent implements ControlValueAccessor {
   file: File | null = null;
+
   onChange: Function | undefined
 
   @HostListener('change', ['$event.target.files']) entFiles(event: FileList) {
@@ -19,7 +21,10 @@ export class BlogFileUploadComponent implements ControlValueAccessor {
     console.log(file)
   }
 
-  constructor(private host: ElementRef<HTMLInputElement>) { }
+  constructor(
+    private host: ElementRef<HTMLInputElement>,
+    private http: HttpClient
+    ) { }
 
   writeValue(value: null) {
     this.host.nativeElement.value = ''
@@ -32,5 +37,24 @@ export class BlogFileUploadComponent implements ControlValueAccessor {
 
   registerOnTouched(fn: Function) {
 
+  }
+
+  ngOnInit(): void {
+  }
+
+  onFileSelected(event: any) {
+    this.file = event.target.files[0];
+  }
+
+  upload() {
+    if (this.file) {
+      const formData = new FormData();
+      formData.append('file', this.file);
+
+      this.http.post('https://localhost:7193/api/image', formData)
+        .subscribe(res => {
+          console.log(res);
+        });
+    }
   }
 }

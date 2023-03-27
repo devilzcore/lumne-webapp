@@ -3,6 +3,8 @@
   <br>
   <span>{{ file ? file.name : 'or drop file here' }}</span>
   <br>
-  <input type="file" class="blog-file-upload--upload-btn">
+  <input type="file" class="blog-file-upload--upload-btn" (change)="onFileSelected($event)">
+  <br>
+  <button (click)="upload()">Upload</button>
 </div>
 
