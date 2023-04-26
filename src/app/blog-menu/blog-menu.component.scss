@@ -19,7 +19,7 @@ $primary-whiter-color: #ffff;
     border-radius: 10px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &__links {
@@ -34,5 +34,31 @@ $primary-whiter-color: #ffff;
     color: $primary-whiter-color;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo a {
+    color: white;
+    margin: auto;
+  }
+
+  &__search-bar {
+    @apply flex justify-center;
+  }
+
+  &__search-bar form {
+    @apply m-auto;
+  }
+
+  &__search-bar--button {
+    @apply m-auto;
+  }
+
+  &__search-bar--input {
+    @apply m-auto bg-white;
   }
 }
