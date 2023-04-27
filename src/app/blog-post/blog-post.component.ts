@@ -98,10 +98,13 @@ export class BlogPostComponent implements OnInit {
 
   addCategoryInSelect() {
     const newValue = prompt("New value:")
+
     if (newValue != null) {
-      const select = document.getElementById("category") as HTMLSelectElement
-      const option = new Option(newValue, newValue)
-      select.add(option)
+      this.categoryService.saveCategory({name: newValue })
+      .subscribe(category => {
+        console.log('Save..', category)
+        this.postForm.reset()
+      })
     }
   }
 
