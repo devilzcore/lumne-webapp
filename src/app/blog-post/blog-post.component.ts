@@ -8,6 +8,8 @@ import { User } from 'src/models/user';
 import { Router } from '@angular/router';
 import { map, catchError, of } from 'rxjs';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { HttpClient, HttpEvent, HttpEventType, HttpHeaders, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-blog-post',
@@ -24,26 +26,26 @@ export class BlogPostComponent implements OnInit {
 
   editorConfig: AngularEditorConfig = {
     editable: true,
-      spellcheck: true,
-      height: 'auto',
-      minHeight: '0',
-      maxHeight: 'auto',
-      width: 'auto',
-      minWidth: '0',
-      translate: 'yes',
-      enableToolbar: true,
-      showToolbar: true,
-      placeholder: 'Enter text here...',
-      defaultParagraphSeparator: '',
-      defaultFontName: '',
-      defaultFontSize: '',
-      fonts: [
-        {class: 'arial', name: 'Arial'},
-        {class: 'times-new-roman', name: 'Times New Roman'},
-        {class: 'calibri', name: 'Calibri'},
-        {class: 'comic-sans-ms', name: 'Comic Sans MS'}
-      ],
-      customClasses: [
+    spellcheck: true,
+    height: 'auto',
+    minHeight: '0',
+    maxHeight: 'auto',
+    width: 'auto',
+    minWidth: '0',
+    translate: 'yes',
+    enableToolbar: true,
+    showToolbar: true,
+    placeholder: 'Enter text here...',
+    defaultParagraphSeparator: '',
+    defaultFontName: '',
+    defaultFontSize: '',
+    fonts: [
+      { class: 'arial', name: 'Arial' },
+      { class: 'times-new-roman', name: 'Times New Roman' },
+      { class: 'calibri', name: 'Calibri' },
+      { class: 'comic-sans-ms', name: 'Comic Sans MS' }
+    ],
+    customClasses: [
       {
         name: 'quote',
         class: 'quote',
@@ -58,6 +60,8 @@ export class BlogPostComponent implements OnInit {
         tag: 'h1',
       },
     ],
+    uploadUrl: 'http://localhost:7193/api/image',
+    uploadWithCredentials: false,
   }
 
   constructor(
@@ -65,7 +69,8 @@ export class BlogPostComponent implements OnInit {
     private categoryService: DataService,
     private postService: DataService,
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private http: HttpClient
   ) {
     this.postForm = this.formBuilder.group({
       id: ['0'],
