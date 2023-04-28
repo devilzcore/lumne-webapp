@@ -2,9 +2,7 @@ $line-color: #D9D9D9;
 $primary-white-color: #ffff;
 
 :host {
-  display: flex;
-  justify-content: center;
-  margin-top: 4rem;
+  @apply flex my-4;
 }
 
 .blog-list {
