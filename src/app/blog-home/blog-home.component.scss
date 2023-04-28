@@ -1,6 +1,7 @@
 .blog-home {
-  background-color: black;
+  @apply bg-black min-h-screen;
 
-  min-width: 100vw;
-  min-height: 100vh;
+  &__container {
+    @apply bg-gray-700 container mx-auto;
+  }
 }
