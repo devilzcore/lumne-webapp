@@ -5,13 +5,7 @@ $category-anime-color: #000575;
 
 .blog-card
 {
-  width: 49.9375rem;
-  height: 17.1875rem;
-
-  border-radius: .3125rem;
-  margin: .625rem;
-
-  display: flex;
+  @apply flex flex-row my-4 max-w-3xl max-h-72;
 
   &__link {
     text-decoration: none;
@@ -23,9 +17,7 @@ $category-anime-color: #000575;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
+    @apply ml-4 flex flex-col m-2 w-full h-full;
   }
 
   &__title h2 {
@@ -37,11 +29,11 @@ $category-anime-color: #000575;
   }
 
   &__image {
-    @apply bg-white w-80 h-56;
+    @apply w-80 h-56;
   }
 
   &__image img {
-    @apply object-cover w-full h-full;
+    @apply object-cover w-full h-full rounded;
   }
 
   &___summary p {
