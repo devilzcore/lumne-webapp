@@ -19,6 +19,7 @@ import { BlogPostsComponent } from './blog-posts/blog-posts.component';
 import { BlogCategoryComponent } from './blog-category/blog-category.component';
 import { BlogCategoriesComponent } from './blog-categories/blog-categories.component';
 import { BlogFileUploadComponent } from './blog-file-upload/blog-file-upload.component';
+import { BlogSideCardComponent } from './blog-side-card/blog-side-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BlogFileUploadComponent } from './blog-file-upload/blog-file-upload.com
     BlogPostsComponent,
     BlogCategoryComponent,
     BlogCategoriesComponent,
-    BlogFileUploadComponent
+    BlogFileUploadComponent,
+    BlogSideCardComponent
   ],
   imports: [
     BrowserModule,
