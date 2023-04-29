@@ -1,1 +1,17 @@
-<p>blog-side-card works!</p>
+<div class="blog-side-card">
+  <div class="blog-side-card__image">
+    <img src="{{ post.image }}" alt="">
+  </div>
+
+  <div class="blog-side-card__content">
+    <div class="blog-side-card__title">
+      <a [routerLink]="postUrl" class="blog-side-card__link">
+        <p>{{ post.title }}</p>
+      </a>
+    </div>
+
+    <div class="blog-side-card__date">
+      {{ dateStr }}
+    </div>
+  </div>
+</div>

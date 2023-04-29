@@ -10,10 +10,16 @@
   <div>
     <h2>Mangás</h2>
     <div class="blog-list--dashed-line"></div>
+      <div *ngFor="let post of posts">
+        <app-blog-side-card [post]="post"></app-blog-side-card>
+      </div>
   </div>
     <div>
-      <h2>Mangás</h2>
+      <h2>Animes</h2>
       <div class="blog-list--dashed-line"></div>
+        <div *ngFor="let post of posts">
+          <app-blog-side-card [post]="post"></app-blog-side-card>
+        </div>
     </div>
 </div>
 </div>
