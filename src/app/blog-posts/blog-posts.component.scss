@@ -2,22 +2,14 @@ $primary-black-color: #000000;
 $primary-white-color: #ffff;
 
 .blog-posts {
-  background-color: $primary-black-color;
-  color: $primary-white-color;
-
-  min-width: 100vw;
-  min-height: 100vh;
+  @apply bg-black text-white min-h-screen;
 
   &__container {
-    display: flex;
-    justify-content: center;
-
-    margin-top: 4.0625rem;
+    @apply container mx-auto;
   }
 
   &__post {
-    width: 48.75rem;
-    overflow: hidden;
+    @apply max-w-3xl overflow-hidden m-auto;
   }
 
   &__image {
