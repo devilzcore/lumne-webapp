@@ -2,10 +2,9 @@ $primary-black-color: #000000;
 $primary-white-color: #ffff;
 
 .blog-posts {
-  @apply bg-black text-white min-h-screen;
+  @apply text-white;
 
   &__container {
-    @apply container mx-auto;
   }
 
   &__post {
