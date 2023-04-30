@@ -1,0 +1,23 @@
+.blog-footer {
+  @apply bg-menu flex flex-col justify-center text-white absolute left-0 right-0;
+
+  &__social {
+    @apply flex justify-center mt-14;
+  }
+
+  &__social a {
+    @apply m-1 no-underline text-white hover:text-blue-800;
+  }
+
+  &__links ul {
+    @apply flex justify-center my-14 list-none;
+  }
+
+  &__links a {
+    @apply m-3 no-underline text-white hover:text-blue-800;
+  }
+
+  p {
+    @apply m-auto mb-8;
+  }
+}
