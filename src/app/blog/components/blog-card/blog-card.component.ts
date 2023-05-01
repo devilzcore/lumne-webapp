@@ -1,6 +1,6 @@
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../../../services/data.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../models/post'
+import { Post } from '../../../../models/post'
 import { ActivatedRoute, Router } from '@angular/router';
 import { slugify } from 'src/helpers/string.utils';
 import { format } from 'date-fns';

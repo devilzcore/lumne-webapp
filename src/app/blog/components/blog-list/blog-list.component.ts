@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../../models/post'
-import { DataService } from '../../services/data.service'
+import { Post } from '../../../../models/post'
+import { DataService } from '../../../../services/data.service'
 
 @Component({
   selector: 'app-blog-list',

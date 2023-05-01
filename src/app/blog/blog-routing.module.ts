@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BlogPostsComponent } from '../blog-posts/blog-posts.component';
-import { BlogHomeComponent } from '../blog-home/blog-home.component';
-import { BlogLoginComponent } from '../blog-login/blog-login.component';
-import { BlogPostComponent } from '../blog-post/blog-post.component';
-import { BlogCardComponent } from '../blog-card/blog-card.component';
-import { BlogFileUploadComponent } from '../blog-file-upload/blog-file-upload.component';
-
 import { AuthGuard } from 'src/helpers/auth.guard';
-import { BlogCategoryComponent } from '../blog-category/blog-category.component';
+
+import { BlogPostsComponent } from './components/blog-posts/blog-posts.component';
+import { BlogHomeComponent } from './components/blog-home/blog-home.component';
+import { BlogLoginComponent } from './components/blog-login/blog-login.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { BlogFileUploadComponent } from './components/blog-file-upload/blog-file-upload.component';
+import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
 
 const routes: Routes = [
   { path: '', component: BlogHomeComponent },

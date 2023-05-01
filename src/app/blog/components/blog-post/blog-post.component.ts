@@ -1,6 +1,6 @@
-import { AuthenticationService } from './../../services/auth.service';
-import { Category } from './../../models/category';
-import { DataService } from './../../services/data.service';
+import { AuthenticationService } from '../../../../services/auth.service';
+import { Category } from '../../../../models/category';
+import { DataService } from '../../../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Post } from 'src/models/post';
