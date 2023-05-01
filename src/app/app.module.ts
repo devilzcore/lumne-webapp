@@ -22,6 +22,7 @@ import { BlogFileUploadComponent } from './blog-file-upload/blog-file-upload.com
 import { BlogSideCardComponent } from './blog-side-card/blog-side-card.component';
 import { BlogFooterComponent } from './blog-footer/blog-footer.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { BlogLayoutComponent } from './layouts/blog-layout/blog-layout.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
     BlogFileUploadComponent,
     BlogSideCardComponent,
     BlogFooterComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    BlogLayoutComponent
   ],
   imports: [
     BrowserModule,
