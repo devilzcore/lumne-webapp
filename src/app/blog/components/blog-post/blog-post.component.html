@@ -6,23 +6,32 @@
 
   <h2>Add a new blog post</h2>
   <form [formGroup]="postForm">
-    <label for="id">Id</label>
-    <input formControlName="id" class="form-control" type="text">
-    <label for="title">Title</label>
-    <input formControlName="title" class="form-control" type="text">
-    <label for="image">URL Image</label>
-    <input formControlName="image" class="form-control" type="text">
-    <label for="">Category</label>
-    <select formControlName="category" id="category">
-      <option *ngFor="let category of categories" value="{{ category.name }}">{{ category.name }}</option>
-    </select>
-    <label for="content">Content</label>
-    <!-- <textarea formControlName="content" class="form-control" name="" id="" cols="30" rows="10"></textarea> -->
-    <angular-editor formControlName="content" [config]="editorConfig"></angular-editor>
-    <button (click)="savePost()">Publish</button>
-    <button (click)="updatePost()">Edit</button>
-    <button (click)="deletePost()">Delete</button>
-    <button (click)="addCategoryInSelect()">Add new category</button>
+    <div class="blog-post__header">
+      <label for="id">Id</label>
+      <input formControlName="id" class="form-control" placeholder="Id" type="text">
+      <label for="title">Title</label>
+      <input formControlName="title" class="form-control" placeholder="Title" type="text">
+      <label for="image">URL Image</label>
+      <input formControlName="image" class="form-control" placeholder="URL Image" type="text">
+    </div>
+    <div class="blog-post__category">
+      <div>
+        <label for="">Category</label>
+        <select formControlName="category" id="category">
+          <option *ngFor="let category of categories" value="{{ category.name }}">{{ category.name }}</option>
+        </select>
+      </div>
+      <button (click)="addCategoryInSelect()">Add new category</button>
+    </div>
+    <div>
+      <angular-editor formControlName="content" [config]="editorConfig"></angular-editor>
+    </div>
+
+    <div class="blog-post__btns">
+      <button (click)="deletePost()">Delete</button>
+      <button (click)="updatePost()">Edit</button>
+      <button (click)="savePost()">Publish</button>
+    </div>
   </form>
 
 </div>

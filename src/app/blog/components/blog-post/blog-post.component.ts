@@ -27,7 +27,7 @@ export class BlogPostComponent implements OnInit {
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: 'auto',
+    height: '35rem',
     minHeight: '0',
     maxHeight: 'auto',
     width: 'auto',

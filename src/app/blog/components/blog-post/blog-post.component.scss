@@ -1,11 +1,26 @@
 .blog-post {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  @apply flex flex-col max-w-screen-xl;
 
-  form {
-    display: flex;
-    flex-direction: column;
+  h2 {
+    @apply text-center font-bold text-2xl m-5 text-gray-800;
+  }
+
+  &__header {
+  }
+
+  &__header input {
+    @apply m-2;
+  }
+
+  &__category {
+    @apply flex justify-between my-2;
+  }
+
+  &__btns {
+    @apply flex flex-row justify-end mt-5;
+  }
+
+  &__btns button {
+    @apply m-1;
   }
 }
