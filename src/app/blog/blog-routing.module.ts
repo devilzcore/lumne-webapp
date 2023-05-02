@@ -13,8 +13,6 @@ import { BlogCategoryComponent } from './components/blog-category/blog-category.
 
 const routes: Routes = [
   { path: '', component: BlogHomeComponent },
-  { path: 'login', component: BlogLoginComponent },
-  { path: 'post', component: BlogPostComponent, canActivate: [AuthGuard] },
   { path: 'posts/category/:category', component: BlogCategoryComponent },
   { path: 'posts/:id', component: BlogPostsComponent },
   { path: 'posts/:id/:title?', component: BlogPostsComponent },
