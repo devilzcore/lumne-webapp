@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-wrap;
+}
+
+aside {
+  @apply w-56 p-5;
+}
+
+main {
+  @apply flex-grow p-5;
+}
