@@ -23,6 +23,7 @@ import { BlogSideCardComponent } from './blog/components/blog-side-card/blog-sid
 import { BlogFooterComponent } from './blog/components/blog-footer/blog-footer.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { BlogLayoutComponent } from './layouts/blog-layout/blog-layout.component';
+import { DashboardNavbarComponent } from './dashboard/components/dashboard-navbar/dashboard-navbar.component';
 
 @NgModule({
   declarations: [
@@ -41,14 +42,15 @@ import { BlogLayoutComponent } from './layouts/blog-layout/blog-layout.component
     BlogSideCardComponent,
     BlogFooterComponent,
     DashboardLayoutComponent,
-    BlogLayoutComponent
+    BlogLayoutComponent,
+    DashboardNavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularEditorModule
+    AngularEditorModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
