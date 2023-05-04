@@ -2,10 +2,14 @@ $primary-menu-color: #0B0A0A;
 $primary-whiter-color: #ffff;
 
 .blog-menu {
-  @apply flex justify-center sticky top-0 z-50;
+  @apply bg-menu py-4 fixed w-screen z-50 left-0 shadow-lg max-w-full;
 
   &__container {
-    @apply bg-menu w-screen h-12 flex justify-between rounded;
+    @apply flex mx-auto justify-between container;
+  }
+
+  &__de {
+     @apply flex justify-between flex-grow;
   }
 
   &__links {
