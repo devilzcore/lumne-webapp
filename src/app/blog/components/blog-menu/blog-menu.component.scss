@@ -45,10 +45,10 @@ $primary-whiter-color: #ffff;
   }
 
   &__search-bar--button {
-    @apply m-auto;
+    @apply bg-blue-400 m-0 text-white border-none outline-none h-[27px] rounded-r;
   }
 
   &__search-bar--input {
-    @apply m-auto bg-white;
+    @apply rounded bg-transparent border border-separate text-white w-[265px] h-[25px] rounded-l;
   }
 }
