@@ -1,10 +1,7 @@
 $line-color: #D9D9D9;
-$primary-white-color: #ffff;
 
 .blog-list {
-  color: $primary-white-color;
-
-  @apply flex flex-row justify-between;
+  @apply flex flex-row text-t_white;
 
   &--dashed-line {
     border: 0.5px solid $line-color;
@@ -17,13 +14,15 @@ $primary-white-color: #ffff;
     font-size: 27;
     font-weight: regular;
     margin: 13px 0;
+
+    @apply uppercase;
+  }
+
+  &__content {
+    @apply mx-auto w-full;
   }
 
   &__side {
-    @apply flex flex-row;
-  }
-
-  &__side div {
-    @apply mx-1;
+    @apply mx-auto max-w-full;
   }
 }
