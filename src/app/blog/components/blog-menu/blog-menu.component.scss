@@ -45,7 +45,7 @@ $primary-whiter-color: #ffff;
   }
 
   &__search-bar--button {
-    @apply bg-[#f50045] m-0 text-white border-[0px] w-[37px] h-[38px]
+    @apply bg-t_pink m-0 text-white border-[0px] w-[37px] h-[38px]
       rounded-r cursor-pointer;
   }
 
