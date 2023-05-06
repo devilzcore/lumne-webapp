@@ -1,8 +1,6 @@
-$primary-menu-color: #0B0A0A;
-$primary-whiter-color: #ffff;
-
 .blog-menu {
-  @apply bg-menu py-4 fixed w-screen z-50 left-0 shadow-lg max-w-full;
+  @apply bg-menu py-4 fixed w-screen z-50 left-0 shadow-lg max-w-full
+    font-sans font-semibold capitalize;
 
   &__container {
     @apply flex mx-auto justify-between container;
@@ -19,11 +17,8 @@ $primary-whiter-color: #ffff;
   }
 
   &__links a {
-    font-weight: regular;
-    margin: auto .75rem;
-    color: $primary-whiter-color;
-    text-decoration: none;
-    text-transform: uppercase;
+    @apply text-t_white no-underline my-auto mx-[.75rem]
+    hover:text-t_pink hover:uppercase;
   }
 
   &__logo {
