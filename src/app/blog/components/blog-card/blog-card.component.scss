@@ -1,19 +1,11 @@
 $date-color: #6C6C6C;
-$category-link-color: #ffff;
-$category-pcgamer-color: #FF0000;
-$category-anime-color: #000575;
 
 .blog-card
 {
   @apply flex flex-row my-4 max-w-3xl max-h-72;
 
   &__link {
-    text-decoration: none;
-    color: $category-link-color;
-  }
-
-  &__link h2:hover {
-    color: blue;
+    @apply no-underline text-t_white;
   }
 
   &__content {
