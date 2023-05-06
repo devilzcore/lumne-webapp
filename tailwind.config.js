@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         menu: "#191919",
         main: "#232323",
+        t_white: "#F5F5F5",
+        t_red: "#FF1F3D",
+        t_pink: "#F50045",
       },
     },
   },
