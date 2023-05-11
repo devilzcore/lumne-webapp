@@ -1,0 +1,32 @@
+.blog-card-loading
+{
+  @apply flex flex-row my-4 max-w-3xl max-h-72 animate-pulse;
+
+  &__content {
+    @apply ml-4 flex flex-col m-2 w-full h-full;
+  }
+
+  &__categories ul {
+    @apply flex flex-row list-none m-0 p-0;
+  }
+
+  &__categories li {
+    @apply w-16 h-5 mr-2 rounded-full bg-content_loading;
+  }
+
+  &__title {
+    @apply p-0 my-[20px] bg-content_loading rounded-full;
+  }
+
+  &__image {
+    @apply w-80 h-56 border-none rounded bg-content_loading;
+  }
+
+  &__summary {
+    @apply p-0 w-[16rem] bg-content_loading rounded-full;
+  }
+
+  &__date {
+    @apply p-0 my-[1.3rem] w-[4.7rem] bg-content_loading rounded-full;
+  }
+}
