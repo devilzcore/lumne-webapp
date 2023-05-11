@@ -10,11 +10,13 @@ import { DataService } from '../../../../services/data.service'
 export class BlogListComponent implements OnInit {
   post = {} as Post
   posts: Post[] = []
+  uploadedContent: boolean | undefined
 
   constructor(private postService: DataService) { }
 
   ngOnInit() {
     this.getPosts()
+    this.uploadedContent = false
   }
 
   getPosts() {
@@ -22,6 +24,7 @@ export class BlogListComponent implements OnInit {
       .subscribe((posts: Post[]) => {
         this.posts = posts
         console.log(posts)
+        this.uploadedContent = true
       })
   }
 }
