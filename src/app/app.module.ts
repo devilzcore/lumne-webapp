@@ -25,6 +25,7 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { BlogLayoutComponent } from './layouts/blog-layout/blog-layout.component';
 import { DashboardNavbarComponent } from './dashboard/components/dashboard-navbar/dashboard-navbar.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { BlogCardLoadingComponent } from './blog-card-loading/blog-card-loading.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
     DashboardLayoutComponent,
     BlogLayoutComponent,
     DashboardNavbarComponent,
-    LoginLayoutComponent
+    LoginLayoutComponent,
+    BlogCardLoadingComponent
   ],
   imports: [
     BrowserModule,
