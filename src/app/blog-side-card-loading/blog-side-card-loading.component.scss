@@ -1,0 +1,26 @@
+$date-color: #6C6C6C;
+$category-link-color: #ffff;
+$category-pcgamer-color: #FF0000;
+$category-anime-color: #000575;
+
+.blog-side-card-loading
+{
+  @apply w-72 my-3 flex flex-row animate-pulse;
+
+  &__content {
+    @apply flex flex-col m-2 w-full;
+  }
+
+  &__title {
+    @apply m-0 p-0 w-[8rem] rounded-full bg-content_loading;
+  }
+
+  &__image {
+    @apply w-48 h-24 rounded bg-content_loading;
+  }
+
+  &__date {
+    color: $date-color;
+    @apply text-xs font-light my-2 w-16 rounded-full bg-content_loading;
+  }
+}
