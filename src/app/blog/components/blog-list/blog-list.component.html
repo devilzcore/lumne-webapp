@@ -1,12 +1,12 @@
 <div class="blog-list">
   <div class="blog-list__content">
-    <h2>Mais recentes</h2>
     <section *ngIf="!uploadedContent">
       <app-blog-card-loading></app-blog-card-loading>
       <app-blog-card-loading></app-blog-card-loading>
       <app-blog-card-loading></app-blog-card-loading>
     </section>
     <section *ngIf="uploadedContent">
+      <h2>Mais recentes</h2>
       <div *ngFor="let post of posts">
         <app-blog-card [post]="post"></app-blog-card>
       </div>
@@ -14,34 +14,58 @@
   </div>
   <div class="blog-list__side">
     <div>
-      <h2>Animes</h2>
-      <!-- <div class="blog-list--dashed-line"></div> -->
+      <section *ngIf="!uploadedContent">
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+      </section>
+      <section *ngIf="uploadedContent">
+        <h2>Animes</h2>
         <div *ngFor="let post of posts">
           <app-blog-side-card [post]="post"></app-blog-side-card>
         </div>
+      </section>
     </div>
-      <div>
+    <div>
+      <section *ngIf="!uploadedContent">
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+      </section>
+      <section *ngIf="uploadedContent">
         <h2>Mangás</h2>
-        <!-- <div class="blog-list--dashed-line"></div> -->
-          <div *ngFor="let post of posts">
-            <app-blog-side-card [post]="post"></app-blog-side-card>
-          </div>
-      </div>
+        <div *ngFor="let post of posts">
+          <app-blog-side-card [post]="post"></app-blog-side-card>
+        </div>
+      </section>
+    </div>
   </div>
   <div class="blog-list__side">
     <div>
-      <h2>Animes</h2>
-      <!-- <div class="blog-list--dashed-line"></div> -->
-      <div *ngFor="let post of posts">
-        <app-blog-side-card [post]="post"></app-blog-side-card>
-      </div>
+      <section *ngIf="!uploadedContent">
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+      </section>
+      <section *ngIf="uploadedContent">
+        <h2>Animes</h2>
+        <div *ngFor="let post of posts">
+          <app-blog-side-card [post]="post"></app-blog-side-card>
+        </div>
+      </section>
     </div>
     <div>
-      <h2>Mangás</h2>
-      <!-- <div class="blog-list--dashed-line"></div> -->
-      <div *ngFor="let post of posts">
-        <app-blog-side-card [post]="post"></app-blog-side-card>
-      </div>
+      <section *ngIf="!uploadedContent">
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+        <app-blog-side-card-loading></app-blog-side-card-loading>
+      </section>
+      <section *ngIf="uploadedContent">
+        <h2>Mangás</h2>
+        <div *ngFor="let post of posts">
+          <app-blog-side-card [post]="post"></app-blog-side-card>
+        </div>
+      </section>
     </div>
   </div>
 </div>
