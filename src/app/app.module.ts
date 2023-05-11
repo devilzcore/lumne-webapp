@@ -25,8 +25,8 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { BlogLayoutComponent } from './layouts/blog-layout/blog-layout.component';
 import { DashboardNavbarComponent } from './dashboard/components/dashboard-navbar/dashboard-navbar.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
-import { BlogCardLoadingComponent } from './blog-card-loading/blog-card-loading.component';
-import { BlogSideCardLoadingComponent } from './blog-side-card-loading/blog-side-card-loading.component';
+import { BlogCardLoadingComponent } from './blog/components/blog-card-loading/blog-card-loading.component';
+import { BlogSideCardLoadingComponent } from './blog/components/blog-side-card-loading/blog-side-card-loading.component';
 
 @NgModule({
   declarations: [
