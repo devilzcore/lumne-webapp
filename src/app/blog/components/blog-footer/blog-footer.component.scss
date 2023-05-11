@@ -6,11 +6,11 @@
   }
 
   &__social a {
-    @apply m-1 no-underline text-white hover:text-blue-800;
+    @apply m-3 no-underline text-white hover:text-blue-800;
   }
 
   &__links ul {
-    @apply flex justify-center my-14 list-none;
+    @apply flex justify-center my-7 list-none;
   }
 
   &__links a {
