@@ -10,6 +10,9 @@
       <div *ngFor="let post of posts">
         <app-blog-card [post]="post"></app-blog-card>
       </div>
+      <div *ngFor="let next of nextPosts">
+        <app-blog-card [post]="next"></app-blog-card>
+      </div>
       <div class="blog-list__button">
         <button (click)="this.loadMorePosts()">Carregar Mais</button>
       </div>
