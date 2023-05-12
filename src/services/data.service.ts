@@ -38,6 +38,14 @@ export class DataService {
       )
   }
 
+  getPostsByPage(page: number): Observable<Post[]> {
+    return this.httpClient.get<Post[]>(this.url + "/page/" + page)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+
   getPostByCategories(category: string): Observable<Post> {
     return this.httpClient.get<Post>(this.url + "/category/" + category)
       .pipe(
