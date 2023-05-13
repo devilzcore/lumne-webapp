@@ -3,17 +3,15 @@
     font-sans font-semibold capitalize;
 
   &__container {
-    @apply flex mx-auto justify-between container;
+    @apply flex lg:mx-auto lg:justify-between lg:container sm:justify-center;
   }
 
   &__de {
-     @apply flex justify-between flex-grow;
+     @apply flex lg:justify-between flex-grow justify-center;
   }
 
   &__links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @apply lg:flex lg:flex-row lg:justify-center hidden sm:block;
   }
 
   &__links a {
@@ -32,7 +30,7 @@
   }
 
   &__search-bar {
-    @apply flex justify-center;
+    @apply lg:flex justify-center hidden sm:block;
   }
 
   &__search-bar form {
