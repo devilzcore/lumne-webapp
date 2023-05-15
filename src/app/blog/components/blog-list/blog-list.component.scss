@@ -19,7 +19,8 @@ $line-color: #D9D9D9;
   }
 
   &__content {
-    @apply mx-auto w-full;
+    /* @apply mx-auto w-full; */
+    @apply mx-auto max-w-full; // temporário para test
   }
 
   &__side {
