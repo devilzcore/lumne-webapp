@@ -3,7 +3,7 @@
     font-sans font-semibold capitalize;
 
   &__container {
-    @apply flex md:mx-auto md:justify-between md:container sm:justify-center;
+    @apply flex md:mx-auto md:justify-between md:container mx-5;
   }
 
   &__de {
