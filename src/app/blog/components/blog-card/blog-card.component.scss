@@ -2,14 +2,18 @@ $date-color: #6C6C6C;
 
 .blog-card
 {
-  @apply flex flex-row my-4 max-w-3xl max-h-72;
+  @apply flex md:flex-row md:my-4 md:max-w-3xl md:max-h-72 md:w-auto flex-col w-72 my-3;
 
   &__link {
     @apply no-underline text-t_white;
   }
 
   &__content {
-    @apply ml-4 flex flex-col m-2 w-full h-full;
+    @apply md:ml-4 flex flex-col md:m-0 md:w-full md:h-full;
+  }
+
+  &__categories {
+    @apply md:my-0 md:mb-2 my-3;
   }
 
   &__title h2 {
@@ -17,11 +21,10 @@ $date-color: #6C6C6C;
     text-transform: uppercase;
     font-weight: bold;
     padding: 0;
-    margin: 20px 0px 0px;
   }
 
   &__image {
-    @apply w-80 h-56;
+    @apply md:w-80 md:h-56;
   }
 
   &__image img {
