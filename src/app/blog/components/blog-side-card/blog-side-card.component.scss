@@ -20,14 +20,12 @@ $category-anime-color: #000575;
     /* flex-direction: column; */
     /* margin-left: 1rem; */
 
-    @apply flex flex-col m-2 w-full;
+    @apply flex flex-col ml-2 w-full md:mt-[-7px];
   }
 
   &__title p {
     font-size: 29;
     font-weight: bold;
-    padding: 0;
-    margin: 20px 0px 0px;
 
     @apply m-0 p-0;
   }
