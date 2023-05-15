@@ -19,11 +19,23 @@
   }
 
   &__search-mobile {
-    @apply md:hidden sm:block;
+    @apply md:hidden sm:block cursor-pointer;
   }
 
   &__search-mobile svg {
     @apply w-6 h-6 m-auto text-white;
+  }
+
+  &__search-mobile--form {
+    @apply absolute top-[25%] right-4 z-10 flex;
+  }
+
+  &__search-mobile--form svg {
+    @apply w-4 h-4 m-auto;
+  }
+
+  &__search-mobile--form input {
+    width: 248px !important;
   }
 
   &__links {
@@ -53,7 +65,8 @@
     @apply flex flex-row m-auto;
   }
 
-  &__search-bar--button {
+  &__search-bar--button,
+  &__search-mobile--form button {
     @apply bg-t_pink m-0 text-white border-[0px] w-[37px] h-[37px]
       rounded-r cursor-pointer;
   }
@@ -62,9 +75,10 @@
     @apply w-4 h-4 m-auto;
   }
 
-  &__search-bar--input {
+  &__search-bar--input, input {
     @apply bg-main border-none appearance-none outline-none
       text-white w-[275px] h-[37px] rounded rounded-l px-2;
+
   }
 
   &__list-menu-mobile {
