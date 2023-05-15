@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog-menu.component.scss']
 })
 export class BlogMenuComponent {
-
+  visibleMenu = false
 }
