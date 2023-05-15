@@ -1,7 +1,7 @@
 $line-color: #D9D9D9;
 
 .blog-list {
-  @apply flex flex-row text-t_white;
+  @apply flex md:flex-row text-t_white flex-col-reverse;
 
   &--dashed-line {
     border: 0.5px solid $line-color;
