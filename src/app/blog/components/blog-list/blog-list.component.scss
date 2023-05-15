@@ -19,8 +19,7 @@ $line-color: #D9D9D9;
   }
 
   &__content {
-    /* @apply mx-auto w-full; */
-    @apply mx-auto max-w-full; // temporário para test
+    @apply mx-auto max-w-full;
   }
 
   &__side {
@@ -28,7 +27,7 @@ $line-color: #D9D9D9;
   }
 
   &__button {
-    @apply flex justify-center;
+    @apply flex justify-center m-6;
   }
 
   &__button button {
