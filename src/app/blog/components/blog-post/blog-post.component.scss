@@ -9,7 +9,7 @@
   }
 
   &__header input {
-    @apply m-2;
+    @apply m-2 border;
   }
 
   &__category {
@@ -20,7 +20,7 @@
     @apply flex flex-row justify-end mt-5;
   }
 
-  &__btns button {
-    @apply m-1;
+  &__btns button, button {
+    @apply m-1 border;
   }
 }
