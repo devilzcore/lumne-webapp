@@ -2,7 +2,7 @@
   @apply bg-menu flex flex-col justify-center text-white absolute left-0 right-0;
 
   &__social {
-    @apply flex justify-center mt-14;
+    @apply flex justify-center md:mt-14 mt-5;
   }
 
   &__social a {
@@ -10,7 +10,8 @@
   }
 
   &__links ul {
-    @apply flex justify-center my-7 list-none;
+    @apply flex md:justify-center md:flex-row
+    md:my-7 flex-col items-center my-4 list-none;
   }
 
   &__links a {
