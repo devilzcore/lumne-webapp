@@ -3,9 +3,9 @@
 }
 
 aside {
-  @apply w-56 p-5;
+  @apply w-64 p-5;
 }
 
 main {
-  @apply flex-grow p-5;
+  @apply flex flex-grow p-5;
 }
