@@ -17,10 +17,7 @@ $date-color: #6C6C6C;
   }
 
   &__title h2 {
-    font-size: 29;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding: 0;
+    @apply uppercase text-3xl font-bold p-0
   }
 
   &__image {
