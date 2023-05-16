@@ -16,7 +16,7 @@ $category-anime-color: #000575;
   }
 
   &__image {
-    @apply w-48 h-24 rounded bg-content_loading;
+    @apply md:w-48 md:h-24 w-80 h-40 rounded bg-content_loading;
   }
 
   &__date {
