@@ -1,8 +1,7 @@
 $primary-black-color: #000000;
-$primary-white-color: #ffff;
 
 .blog-posts {
-  @apply text-white;
+  @apply text-t_white;
 
   &__container {
   }
@@ -11,25 +10,28 @@ $primary-white-color: #ffff;
     @apply max-w-3xl overflow-hidden m-auto;
   }
 
+  &__post h1 {
+    @apply text-5xl font-bold;
+  }
+
   &__image {
-    max-width: 100%;
-    height: auto;
+    @apply w-full h-auto my-2;
   }
 
   &--reading {
+    @apply my-2;
   }
 
   &--date {
-    font-weight: lighter;
-    font-size: 12px;
+    @apply font-light text-xs;
   }
 
-  &----summary {
-    font-size: 17px;
+  &---summary {
+    @apply text-lg;
   }
 
   &__content {
-    font-size: 17px;
+    @apply mb-7;
   }
 
   &__content img {
