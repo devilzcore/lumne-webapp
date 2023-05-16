@@ -10,12 +10,7 @@ $line-color: #D9D9D9;
   }
 
   h2 {
-    margin-left: .75rem;
-    font-size: 27;
-    font-weight: regular;
-    margin: 13px 0;
-
-    @apply uppercase;
+    @apply md:mt-[13px] uppercase text-[21px] font-bold;
   }
 
   &__content {
@@ -27,7 +22,7 @@ $line-color: #D9D9D9;
   }
 
   &__button {
-    @apply flex justify-center m-6;
+    @apply flex justify-center m-6 animate-bounce;
   }
 
   &__button button {
