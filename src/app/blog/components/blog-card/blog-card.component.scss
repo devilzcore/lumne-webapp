@@ -13,11 +13,11 @@ $date-color: #6C6C6C;
   }
 
   &__categories {
-    @apply md:my-0 md:mb-2 my-3;
+    @apply md:my-0 md:mb-2 mt-3 mb-1;
   }
 
   &__title h2 {
-    @apply uppercase text-3xl font-bold p-0
+    @apply uppercase md:text-3xl font-bold p-0 m-0;
   }
 
   &__image {
