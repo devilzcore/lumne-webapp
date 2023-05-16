@@ -8,11 +8,7 @@ $category-anime-color: #000575;
   flex-wrap: wrap;
 
   &__category {
-    width: 60px;
-    height: 20px;
-    margin-right: 10px;
-    border-radius: 5%;
-    text-align: center;
+    @apply flex justify-center items-center w-[60px] h-[20px] rounded-[5%];
   }
 
   &__category a {
