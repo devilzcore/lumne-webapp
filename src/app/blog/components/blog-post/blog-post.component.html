@@ -12,7 +12,8 @@
       <label for="title">Title</label>
       <input formControlName="title" class="form-control" placeholder="Title" type="text">
       <label for="image">URL Image</label>
-      <input formControlName="image" class="form-control" placeholder="URL Image" type="text">
+      <input (change)="onFileSelected($event)" formControlName="image" class="form-control" placeholder="URL Image" type="file">
+      <button (click)="onUpload()">Send</button>
     </div>
     <div class="blog-post__category">
       <div>

@@ -137,13 +137,40 @@ export class BlogPostComponent implements OnInit {
       })
   }
 
+  selectedFile?: File
+  fileUrl: string = ''
+
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+
+  onUpload() {
+    if (!this.selectedFile) {
+      console.log("File not found!")
+      return
+    }
+
+    interface Image {
+      imageUrl: string
+    }
+
+    const fd = new FormData();
+    fd.append('file', this.selectedFile!, this.selectedFile!.name);
+
+    this.http.post('http://localhost:7193/api/image', fd)
+      .subscribe(res => {
+        let image: Image = res as Image
+        this.fileUrl = image.imageUrl
+      });
+  }
+
   post() {
     const categories: Category[] = this.postCategories
 
     const post: Post = {
       id: this.postForm.controls['id'].value,
       title: this.postForm.controls['title'].value,
-      image: this.postForm.controls['image'].value,
+      image: this.fileUrl,
       content: this.postForm.controls['content'].value,
       categories: categories
     }
