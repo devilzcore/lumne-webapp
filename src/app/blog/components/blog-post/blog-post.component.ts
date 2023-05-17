@@ -138,10 +138,6 @@ export class BlogPostComponent implements OnInit {
   }
 
   post() {
-    // const categories: Category[] = [{
-    //   name: this.postForm.controls['category'].value
-    // }];
-
     const categories: Category[] = this.postCategories
 
     const post: Post = {
