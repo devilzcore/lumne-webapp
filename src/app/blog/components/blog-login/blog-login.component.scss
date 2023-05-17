@@ -10,6 +10,10 @@
   }
 
   button {
-    margin-top: .9375rem;
+    @apply border mt-4;
+  }
+
+  input {
+    @apply border;
   }
 }
