@@ -138,9 +138,11 @@ export class BlogPostComponent implements OnInit {
   }
 
   post() {
-    const categories: Category[] = [{
-      name: this.postForm.controls['category'].value
-    }];
+    // const categories: Category[] = [{
+    //   name: this.postForm.controls['category'].value
+    // }];
+
+    const categories: Category[] = this.postCategories
 
     const post: Post = {
       id: this.postForm.controls['id'].value,
@@ -158,6 +160,7 @@ export class BlogPostComponent implements OnInit {
       .subscribe(post => {
         console.log('Save..', post)
         this.postForm.reset()
+        this.postCategories = []
       })
   }
 
