@@ -23,4 +23,8 @@
   &__btns button, button {
     @apply m-1 border;
   }
+
+  button.active {
+    @apply border border-green-500;
+  }
 }

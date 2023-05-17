@@ -19,6 +19,9 @@ import { Observable } from 'rxjs';
 export class BlogPostComponent implements OnInit {
   category = {} as Category
   categories: Category[] = []
+  postCategories: Category[] = []
+
+  press = false
 
   postForm!: FormGroup
 
@@ -106,6 +109,32 @@ export class BlogPostComponent implements OnInit {
         this.postForm.reset()
       })
     }
+  }
+
+  pressCategoryPost(categoryName: string) {
+    if (!this.press) {
+      if (this.existsCategory(categoryName)) {
+        this.removeCategoryInPost(categoryName)
+      } else {
+        this.addCategoryInPost(categoryName)
+      }
+      console.log('array category', this.postCategories)
+    }
+  }
+
+  existsCategory(categoryName: string) {
+    return this.postCategories.some(category => category.name === categoryName)
+  }
+
+  addCategoryInPost(categoryName: string) {
+    this.postCategories.push({ name: categoryName })
+  }
+
+  removeCategoryInPost(categoryName: string) {
+    this.postCategories = this.postCategories.
+      filter((category) => {
+        return category.name !== categoryName
+      })
   }
 
   post() {

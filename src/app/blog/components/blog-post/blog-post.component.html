@@ -17,9 +17,10 @@
     <div class="blog-post__category">
       <div>
         <label for="">Category</label>
-        <select formControlName="category" id="category">
+        <button [ngClass]="{'active': existsCategory(category.name!) }" *ngFor="let category of categories" (click)="pressCategoryPost(category.name!)" >{{ category.name }}</button>
+        <!-- <select formControlName="category" id="category">
           <option *ngFor="let category of categories" value="{{ category.name }}">{{ category.name }}</option>
-        </select>
+        </select> -->
       </div>
       <button (click)="addCategoryInSelect()">Add new category</button>
     </div>
