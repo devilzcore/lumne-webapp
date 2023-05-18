@@ -9,3 +9,7 @@ aside {
 main {
   @apply flex flex-grow p-5;
 }
+
+main div {
+  @apply md:fixed;
+}
