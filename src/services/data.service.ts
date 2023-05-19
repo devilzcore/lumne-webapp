@@ -54,8 +54,8 @@ export class DataService {
       )
   }
 
-  getPostByCategories(category: string): Observable<Post> {
-    return this.httpClient.get<Post>(this.url + "/category/" + category)
+  getPostByCategories(category: string): Observable<Post[]> {
+    return this.httpClient.get<Post[]>(this.url + "/category/" + category)
       .pipe(
         retry(2),
         catchError(this.handleError)
