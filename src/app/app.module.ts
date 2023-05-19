@@ -27,6 +27,7 @@ import { DashboardNavbarComponent } from './dashboard/components/dashboard-navba
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { BlogCardLoadingComponent } from './blog/components/blog-card-loading/blog-card-loading.component';
 import { BlogSideCardLoadingComponent } from './blog/components/blog-side-card-loading/blog-side-card-loading.component';
+import { BlogSearchPostsComponent } from './blog/components/blog-search-posts/blog-search-posts.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { BlogSideCardLoadingComponent } from './blog/components/blog-side-card-l
     DashboardNavbarComponent,
     LoginLayoutComponent,
     BlogCardLoadingComponent,
-    BlogSideCardLoadingComponent
+    BlogSideCardLoadingComponent,
+    BlogSearchPostsComponent
   ],
   imports: [
     BrowserModule,
