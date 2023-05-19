@@ -13,8 +13,9 @@ export class BlogListComponent implements OnInit {
 
   uploadedContent: boolean = false
 
-  loadMore = 4
-  currentPage = 0
+  currentPage = 1
+  loadMore = this.currentPage + 1
+  maxPostsPerPage = 4
   nextPosts: Post[] = []
 
   constructor(private postService: DataService) { }
@@ -42,7 +43,7 @@ export class BlogListComponent implements OnInit {
   }
 
   loadMorePosts(): void {
-    this.nextPostsPage(this.loadMore)
-    this.loadMore = this.loadMore * 2
+    if (!(this.nextPosts.length % this.maxPostsPerPage !== 0))
+      this.nextPostsPage(this.loadMore++)
   }
 }
