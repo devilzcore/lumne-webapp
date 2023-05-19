@@ -10,6 +10,7 @@ import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogFileUploadComponent } from './components/blog-file-upload/blog-file-upload.component';
 import { BlogCategoryComponent } from './components/blog-category/blog-category.component';
+import { BlogSearchPostsComponent } from './components/blog-search-posts/blog-search-posts.component';
 
 const routes: Routes = [
   { path: '', component: BlogHomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'posts/:id', component: BlogPostsComponent },
   { path: 'posts/:id/:title?', component: BlogPostsComponent },
   { path: 'card', component: BlogCardComponent },
-  { path: 'upload', component: BlogFileUploadComponent }
+  { path: 'upload', component: BlogFileUploadComponent },
+  { path: 'search/:title', component: BlogSearchPostsComponent }
 ];
 
 @NgModule({
