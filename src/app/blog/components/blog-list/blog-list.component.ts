@@ -11,6 +11,10 @@ export class BlogListComponent implements OnInit {
   post = {} as Post
   posts: Post[] = []
 
+  categoriesPosts: Post[] = []
+  animePosts: Post[] = []
+  ePosts: Post[] = []
+
   uploadedContent: boolean = false
 
   currentPage = 1
@@ -22,6 +26,23 @@ export class BlogListComponent implements OnInit {
 
   ngOnInit() {
     this.getPosts(this.currentPage)
+
+    this.getPostsByCategories('anime')
+    this.getPostsByCategories('e1')
+  }
+
+  getPostsByCategories(category: string) {
+    this.postService.getPostByCategories(category)
+      .subscribe((posts: Post[]) => {
+        if (category === 'anime')
+          this.animePosts = posts
+
+        if (category === 'e1')
+          this.ePosts = posts
+
+        console.log(this.ePosts)
+        console.log(this.animePosts)
+      })
   }
 
   getPosts(page: number) {
