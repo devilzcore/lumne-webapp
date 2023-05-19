@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-blog-menu',
@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class BlogMenuComponent {
   visibleMenu = false
   visibleSearch = false
+
+  inputValue: string = ''
 }
