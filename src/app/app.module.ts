@@ -13,7 +13,7 @@ import { BlogLoginComponent } from './blog/components/blog-login/blog-login.comp
 import { BlogHomeComponent } from './blog/components/blog-home/blog-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BlogPostComponent } from './blog/components/blog-post/blog-post.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BlogPostsComponent } from './blog/components/blog-posts/blog-posts.component';
 import { BlogCategoryComponent } from './blog/components/blog-category/blog-category.component';
@@ -59,6 +59,7 @@ import { BlogSearchPostsComponent } from './blog/components/blog-search-posts/bl
     HttpClientModule,
     ReactiveFormsModule,
     AngularEditorModule,
+    FormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
