@@ -1,0 +1,7 @@
+.blog-category {
+  @apply flex flex-col items-center;
+
+  h1 {
+    @apply m-5 text-4xl text-t_white font-bold uppercase;
+  }
+}

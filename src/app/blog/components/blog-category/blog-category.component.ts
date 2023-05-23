@@ -12,6 +12,8 @@ export class BlogCategoryComponent implements OnInit {
   post = {} as Post
   posts: Post[] = []
 
+  categoryName: string = ''
+
   constructor(
     private postService: DataService,
     private route: ActivatedRoute
@@ -24,6 +26,7 @@ export class BlogCategoryComponent implements OnInit {
   getPosts() {
     this.route.params.subscribe((params) => {
       const category = params['category']
+      this.categoryName = category
       return this.postService.getPostByCategories(category)
       .subscribe(posts => this.posts = posts as Post[])
     })
