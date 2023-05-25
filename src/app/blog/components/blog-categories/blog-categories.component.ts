@@ -9,4 +9,9 @@ import { Post } from 'src/models/post';
 export class BlogCategoriesComponent {
   @Input() post!: Post
 
+  randomColor() {
+    let colors = ['pink', 'red']
+    let random = Math.floor(Math.random() * colors.length)
+    return colors[random]
+  }
 }
