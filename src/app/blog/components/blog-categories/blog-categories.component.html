@@ -1,5 +1,5 @@
 <div class="blog-categories">
-  <div *ngFor="let category of post.categories" [ngClass]="'blog-categories__category blog-categories__category--' + category.name?.toLowerCase()">
+  <div *ngFor="let category of post.categories" [ngClass]="'blog-categories__category blog-categories__category--' + randomColor()">
     <a href="">
       {{ category.name }}
     </a>

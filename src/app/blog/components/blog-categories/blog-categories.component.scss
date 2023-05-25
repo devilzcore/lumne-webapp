@@ -1,14 +1,12 @@
 $date-color: #6C6C6C;
 $category-link-color: #ffff;
-$category-pcgamer-color: #FF0000;
-$category-anime-color: #000575;
 
 .blog-categories {
   display: flex;
   flex-wrap: wrap;
 
   &__category {
-    @apply flex justify-center items-center w-[60px] h-[20px] rounded-[5%];
+    @apply flex justify-center items-center w-[60px] h-[20px] rounded-[10%] mr-2;
   }
 
   &__category a {
@@ -18,11 +16,11 @@ $category-anime-color: #000575;
     font-weight: regular;
   }
 
-  &__category--e2 {
-    background-color: $category-pcgamer-color;
+  &__category--red {
+    @apply bg-t_red;
   }
 
-  &__category--anime {
-    background-color: $category-anime-color;
+  &__category--pink {
+    @apply bg-t_pink;
   }
 }
