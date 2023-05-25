@@ -5,21 +5,9 @@ $category-anime-color: #000575;
 
 .blog-side-card
 {
-  /* width: 49.9375rem;
-  height: 17.1875rem;
-
-  border-radius: .3125rem;
-  margin: .625rem;
-
-  display: flex; */
-
   @apply w-72 my-3 flex flex-row;
 
   &__content {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* margin-left: 1rem; */
-
     @apply flex flex-col ml-2 w-full md:mt-[-7px];
   }
 
@@ -33,10 +21,6 @@ $category-anime-color: #000575;
   &__link {
     text-decoration: none;
     color: $category-link-color;
-  }
-
-  &__link p:hover {
-    color: blue;
   }
 
   &__image {
