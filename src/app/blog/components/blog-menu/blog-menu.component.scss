@@ -39,7 +39,7 @@
   }
 
   &__links {
-    @apply md:flex md:flex-row md:justify-center hidden sm:block;
+    @apply md:flex md:flex-row md:justify-center hidden sm:block md:max-w-[240px];
   }
 
   &__links a {
