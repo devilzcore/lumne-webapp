@@ -6,6 +6,10 @@ div {
     @apply container mx-auto;
 }
 
+main div {
+  @apply min-h-[65vh];
+}
+
 .spacing {
   @apply p-9;
 }
