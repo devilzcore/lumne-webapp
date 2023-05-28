@@ -38,6 +38,8 @@ export class BlogPostsComponent implements OnInit {
         const slug = slugify(post.title!);
         const url = `/posts/${post.id}/${slug}`;
         history.replaceState({}, '', url);
+
+        this.readingTime()
       })
     })
 
@@ -45,6 +47,20 @@ export class BlogPostsComponent implements OnInit {
     // this.postService.getPostId(Number(id)).subscribe(post => {
     //   this.post = post
     // })
+
+    // this.readingTime()
   }
 
+  readingTime() {
+    let wordCount = this.post.content?.split(" ").length
+    let wpm = 200
+
+    if (wordCount! >= wpm) {
+      let minutes = (wordCount!) / wpm
+      return ~~minutes + ' minutes to read post.'
+    } else {
+      let seconds = (wordCount! * 60) / wpm
+      return ~~seconds + ' seconds to read post.'
+    }
+  }
 }
