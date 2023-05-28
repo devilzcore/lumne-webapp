@@ -12,9 +12,7 @@ import { format } from 'date-fns';
   encapsulation: ViewEncapsulation.None
 })
 export class BlogPostsComponent implements OnInit {
-  // post!: Post
   post = {} as Post
-
   dateStr: string = ''
 
   constructor(
@@ -23,36 +21,18 @@ export class BlogPostsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // method 001 GetByDateAndTitle
-    // const id = this.route.snapshot.paramMap.get('id')
-    // const title = this.route.snapshot.paramMap.get('title')
-    // const dateStr = this.route.snapshot.paramMap.get('date');
-    // const date = new Date(dateStr!);
-
-    // this.postService.getPostId(Number(id)).subscribe(post => {
-    //   this.post = post
-    // })
-
-    // method 002 GetById
     this.route.params.subscribe((params) => {
       const id = params['id']
       this.postService.getPostId(Number(id)).subscribe(post => {
         this.post = post
-        const slug = slugify(post.title!);
-        const url = `/posts/${post.id}/${slug}`;
-        history.replaceState({}, '', url);
+        const slug = slugify(post.title!)
+        const url = `/posts/${post.id}/${slug}`
+        history.replaceState({}, '', url)
 
         this.readingTime()
         this.dateStr = this.formatDate(new Date(this.post.postedAt!))
       })
     })
-
-    // method 003
-    // this.postService.getPostId(Number(id)).subscribe(post => {
-    //   this.post = post
-    // })
-
-    // this.readingTime()
   }
 
   formatDate(date: Date): string {
