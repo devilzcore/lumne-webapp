@@ -4,7 +4,7 @@
     <div class="blog-posts__post">
       <h1>{{ post.title }}</h1>
       <p class="blog-posts--reading">{{ readingTime() }}</p>
-      <p class="blog-posts--date">{{ post.postedAt }}</p>
+      <p class="blog-posts--date">{{ dateStr }}</p>
       <img class="blog-posts__image" src="{{ post.image }}" alt="">
       <app-blog-categories [post]="post"></app-blog-categories>
       <p class="blog-posts--summary">{{ post.summary }}</p>

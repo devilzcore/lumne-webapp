@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Post } from 'src/models/post';
 import { DataService } from 'src/services/data.service';
+import { format } from 'date-fns';
 
 @Component({
   selector: 'app-blog-posts',
@@ -13,6 +14,8 @@ import { DataService } from 'src/services/data.service';
 export class BlogPostsComponent implements OnInit {
   // post!: Post
   post = {} as Post
+
+  dateStr: string = ''
 
   constructor(
     private route: ActivatedRoute,
@@ -40,6 +43,7 @@ export class BlogPostsComponent implements OnInit {
         history.replaceState({}, '', url);
 
         this.readingTime()
+        this.dateStr = this.formatDate(new Date(this.post.postedAt!))
       })
     })
 
@@ -49,6 +53,10 @@ export class BlogPostsComponent implements OnInit {
     // })
 
     // this.readingTime()
+  }
+
+  formatDate(date: Date): string {
+    return format(date, 'H:m:s dd-MM-yyyy');
   }
 
   readingTime() {
