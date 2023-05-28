@@ -1,3 +1,7 @@
 .blog-search {
   @apply flex flex-col;
+
+  &__container {
+    @apply flex justify-center;
+  }
 }
