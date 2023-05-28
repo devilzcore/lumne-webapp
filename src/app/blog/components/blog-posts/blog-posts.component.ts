@@ -14,6 +14,7 @@ import { format } from 'date-fns';
 export class BlogPostsComponent implements OnInit {
   post = {} as Post
   dateStr: string = ''
+  loadingPosts = false
 
   constructor(
     private route: ActivatedRoute,
@@ -31,6 +32,7 @@ export class BlogPostsComponent implements OnInit {
 
         this.readingTime()
         this.dateStr = this.formatDate(new Date(this.post.postedAt!))
+        this.loadingPosts = true
       })
     })
   }

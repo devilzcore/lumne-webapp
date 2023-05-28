@@ -1,4 +1,4 @@
-<div class="blog-posts">
+<div class="blog-posts" *ngIf="loadingPosts">
 <br />
   <div class="blog-posts__container">
     <div class="blog-posts__post">
@@ -17,6 +17,42 @@
   </div>
 </div>
 
+<div class="blog-posts--loading" *ngIf="loadingPosts == false">
+<br />
+  <div class="blog-posts--loading__container">
+    <div class="blog-posts--loading__post">
+      <h1>&nbsp;</h1>
+      <div class="blog-posts--loading--date">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="blog-posts--loading__image">
+        <img alt="">
+      </div>
+      <div class="blog-posts--loading__categories">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="blog-posts--loading__content">
+        <div class="blog-posts--loading__content--one">
+          &nbsp;
+        </div>
+        <div class="blog-posts--loading__content--two">
+          &nbsp;
+        </div>
+        <div class="blog-posts--loading__content--three">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
