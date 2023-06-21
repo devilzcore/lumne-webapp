@@ -6,10 +6,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Post } from 'src/models/post';
 import { User } from 'src/models/user';
 import { Router } from '@angular/router';
-import { map, catchError, of } from 'rxjs';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
-import { HttpClient, HttpEvent, HttpEventType, HttpHeaders, HttpRequest } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-blog-post',
@@ -20,6 +19,9 @@ export class BlogPostComponent implements OnInit {
   category = {} as Category
   categories: Category[] = []
   postCategories: Category[] = []
+
+  localStorage = `${environment.apiUrl}`
+  uploadUrl = `${environment.uploadUrl}`
 
   press = false
 
@@ -63,7 +65,7 @@ export class BlogPostComponent implements OnInit {
         tag: 'h1',
       },
     ],
-    uploadUrl: 'http://localhost:7193/api/image',
+    uploadUrl: this.uploadUrl,
     uploadWithCredentials: false,
   }
 
@@ -150,17 +152,17 @@ export class BlogPostComponent implements OnInit {
       return
     }
 
-    interface Image {
+    interface File {
       imageUrl: string
     }
 
     const fd = new FormData();
-    fd.append('file', this.selectedFile!, this.selectedFile!.name);
+    fd.append('File', this.selectedFile!, this.selectedFile!.name);
 
-    this.http.post('http://localhost:7193/api/image', fd)
+    this.http.post(this.uploadUrl, fd)
       .subscribe(res => {
-        let image: Image = res as Image
-        this.fileUrl = image.imageUrl
+        let file: File = res as File
+        this.fileUrl = file.imageUrl
       });
   }
 
