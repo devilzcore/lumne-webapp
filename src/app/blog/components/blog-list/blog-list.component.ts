@@ -13,7 +13,8 @@ export class BlogListComponent implements OnInit {
 
   categoriesPosts: Post[] = []
   animePosts: Post[] = []
-  ePosts: Post[] = []
+  mangaPosts: Post[] = []
+  webtoomPost: Post[] = []
 
   uploadedContent: boolean = false
 
@@ -27,20 +28,25 @@ export class BlogListComponent implements OnInit {
   ngOnInit() {
     this.getPosts(this.currentPage)
 
-    this.getPostsByCategories('anime')
-    this.getPostsByCategories('e1')
+    this.getPostsByCategories('animes')
+    this.getPostsByCategories('mangas')
+    this.getPostsByCategories('webtoom')
   }
 
   getPostsByCategories(category: string) {
     this.postService.getPostByCategories(category)
       .subscribe((posts: Post[]) => {
-        if (category === 'anime')
+        if (category === 'animes')
           this.animePosts = posts
 
-        if (category === 'e1')
-          this.ePosts = posts
+        if (category === 'mangas')
+          this.mangaPosts = posts
 
-        console.log(this.ePosts)
+        if (category === 'webtoom') {
+          this.webtoomPost = posts
+        }
+
+        console.log(this.mangaPosts)
         console.log(this.animePosts)
       })
   }

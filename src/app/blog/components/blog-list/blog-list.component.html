@@ -40,7 +40,7 @@
       </section>
       <section *ngIf="uploadedContent">
         <h2>Mangás</h2>
-        <div *ngFor="let post of ePosts">
+        <div *ngFor="let post of mangaPosts">
           <app-blog-side-card [post]="post"></app-blog-side-card>
         </div>
       </section>
@@ -54,8 +54,8 @@
         <app-blog-side-card-loading></app-blog-side-card-loading>
       </section>
       <section *ngIf="uploadedContent">
-        <h2>Animes</h2>
-        <div *ngFor="let post of posts">
+        <h2>Webtooms</h2>
+        <div *ngFor="let post of webtoomPost">
           <app-blog-side-card [post]="post"></app-blog-side-card>
         </div>
       </section>
