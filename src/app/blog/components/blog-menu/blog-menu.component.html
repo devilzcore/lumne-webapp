@@ -40,7 +40,7 @@
         </button>
         <form class="blog-menu__search-mobile--form" *ngIf="visibleSearch">
           <input [(ngModel)]="inputValue" name="inputValue" type="text" />
-          <button routerLink="/search/{{ inputValue }}">
+          <button (click)="navigateToSearch()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -63,7 +63,7 @@
             type="text"
           />
           <button
-            routerLink="/search/{{ inputValue }}"
+            (click)="navigateToSearch()"
             class="blog-menu__search-bar--button"
           >
             <span>
