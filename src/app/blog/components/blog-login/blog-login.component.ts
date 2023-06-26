@@ -33,7 +33,7 @@ export class BlogLoginComponent implements OnInit {
       password: ['', Validators.required]
     })
 
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/post'
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard'
   }
 
   get f() { return this.loginForm.controls }
