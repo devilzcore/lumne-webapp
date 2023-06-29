@@ -1,7 +1,6 @@
-$date-color: #6C6C6C;
+$date-color: #6c6c6c;
 
-.blog-card
-{
+.blog-card {
   @apply flex md:flex-row md:my-4 md:max-w-3xl md:max-h-72 md:w-auto flex-col w-72 my-3;
 
   &__link {
@@ -21,7 +20,7 @@ $date-color: #6C6C6C;
   }
 
   &__image {
-    @apply md:w-80 md:h-56;
+    @apply md:w-80 md:h-56 h-56;
   }
 
   &__image img {
