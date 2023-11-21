@@ -3,6 +3,7 @@ import { JwtInterceptor } from './../helpers/jwt.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { NgOptimizedImage } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -59,7 +60,8 @@ import { BlogSearchPostsComponent } from './blog/components/blog-search-posts/bl
     HttpClientModule,
     ReactiveFormsModule,
     AngularEditorModule,
-    FormsModule
+    FormsModule,
+    NgOptimizedImage
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
