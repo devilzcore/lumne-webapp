@@ -8,6 +8,7 @@ import { DashboardPostsListComponent } from './components/dashboard-posts-list/d
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'post', component: BlogPostComponent, canActivate: [AuthGuard] },
+  { path: 'post/:id', component: BlogPostComponent, canActivate: [AuthGuard] },
   { path: 'list', component: DashboardPostsListComponent, canActivate: [AuthGuard] },
 ];
 

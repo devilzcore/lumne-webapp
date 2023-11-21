@@ -1,0 +1,13 @@
+.dashboard-posts-list {
+  &__content {
+    @apply mx-auto md:w-full max-w-full bg-blue-300;
+  }
+
+  ul li {
+    @apply flex justify-between bg-blue-400 mt-2;
+  }
+
+  li div {
+    @apply mr-5;
+  }
+}
